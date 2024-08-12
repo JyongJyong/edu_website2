@@ -216,3 +216,124 @@ header.scrolled #gnb a::after {
 #main_view .pager span.active {
   background: #fff;
 }
+
+#works {
+  padding-bottom: 100px;
+  border-bottom: 1px solid #eee;
+}
+#works h3 {
+  margin: 50px 120px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#works h3 a:hover {
+  text-decoration: underline;
+}
+#works .list {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-frow: 커지는 비율; flex-shrink: 작아지는 비율; flex-basis: 너비; */
+}
+#works .list li {
+  background: #000;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  flex: 0 0 25%;
+  overflow: hidden;
+  position: relative;
+}
+#works .list li::before {
+  content: "";
+  display: block;
+  padding-bottom: 56%;
+  background: center center/cover no-repeat;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+#works .list li:hover::before {
+  transform: scale(1.12, 1.12);
+  opacity: 1;
+}
+#works .list li:nth-child(1)::before {
+  background-image: url("../images/works/work01.jpg");
+}
+#works .list li:nth-child(2)::before {
+  background-image: url("../images/works/work02.jpg");
+}
+#works .list li:nth-child(3)::before {
+  background-image: url("../images/works/work03.jpg");
+}
+#works .list li:nth-child(4)::before {
+  background-image: url("../images/works/work04.jpg");
+}
+#works .list li:nth-child(5)::before {
+  background-image: url("../images/works/work05.jpg");
+}
+#works .list li:nth-child(6)::before {
+  background-image: url("../images/works/work06.jpg");
+}
+#works .list li:nth-child(7)::before {
+  background-image: url("../images/works/work07.jpg");
+}
+#works .list li:nth-child(8)::before {
+  background-image: url("../images/works/work08.jpg");
+}
+#works .list li:nth-child(9)::before {
+  background-image: url("../images/works/work09.jpg");
+}
+#works .list li:nth-child(10)::before {
+  background-image: url("../images/works/work10.jpg");
+}
+#works .list li:nth-child(11)::before {
+  background-image: url("../images/works/work11.jpg");
+}
+#works .list li:nth-child(12)::before {
+  background-image: url("../images/works/work12.jpg");
+}
+#works .list a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+}
+#works .list h4 {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+#works .list a:hover h4 {
+  bottom: 41px;
+}
+#works .list p {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+#works .list i {
+  margin-right: 4px;
+}
+#works .more {
+  display: block;
+  margin: 50px auto 0;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #222;
+  font-size: 16px;
+  border: 1px solid #222;
+}
+#works .more:hover {
+  background: #222;
+  color: #fff;
+}

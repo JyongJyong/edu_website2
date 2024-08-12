@@ -79,3 +79,35 @@ header{
         span.active{background: #fff;}
     }// end: .pager
 } // end: #main_view
+
+#works{
+    padding-bottom: 100px; border-bottom: 1px solid #eee;
+    h3{margin: 50px 120px; font-size: 20px; font-weight: bold;}
+    h3 a:hover{text-decoration: underline;}
+    .list{
+        display: flex; flex-wrap: wrap;
+        /* flex-frow: 커지는 비율; flex-shrink: 작아지는 비율; flex-basis: 너비; */
+        li{background: #000; border: 1px solid #fff; box-sizing: border-box; flex: 0 0 25%; overflow: hidden; position: relative;}
+        li::before{content: ''; display: block; padding-bottom: 56%; background: center center/cover no-repeat; opacity: .5; transition: all .2s ease-in-out;}
+        li:hover::before{transform: scale(1.12, 1.12); opacity: 1;}
+
+        @for $i from 1 through 12{  
+            li:nth-child(#{$i})::before{
+                @if($i < 10){
+                    background-image: url("../images/works/work0"+$i+".jpg");
+                }@else{
+                    background-image: url("../images/works/work"+$i+".jpg");
+                }
+            }
+        } //end: @for
+
+        a{position: absolute; top: 0; left: 0; bottom: 0; right: 0; color: #fff;} // width: 100%; height: 100%;
+        h4{position: absolute; left: 20px; bottom: 30px; font-size: 18px;letter-spacing: -1px; width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all .3s ease-in-out; font-weight: bold;}
+        a:hover h4{bottom: 41px;}
+        p{position: absolute; left: 20px; bottom: 15px;}
+        i{margin-right: 4px;}
+    }// end: .list
+
+    .more{display: block; margin: 50px auto 0; width: 200px; height: 50px; line-height: 50px; text-align: center; color: #222; font-size: 16px; border: 1px solid #222;}
+    .more:hover{background: #222; color: #fff;}
+}// end: #works

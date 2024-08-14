@@ -24,3 +24,19 @@ const swiper1 = new Swiper('#main_view', {
       clickable: true, // 클릭시 슬라이드 이동
     },
   });
+
+  // press영역 Swiper 호출
+const swipe2 = new Swiper('#press .inner', {
+  // Optional parameters
+  wrapperClass:'slider',
+  slideClass:'item',
+
+  slidesPerView: 5,
+  spaceBetween: 30,
+
+  pagination:{
+    el: '.dot',
+    bulletActiveClass: 'active',
+    clickable: true,
+  }
+});

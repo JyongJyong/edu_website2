@@ -1,5 +1,14 @@
 @charset "UTF-8";
 /* 변수선언 */
+::-moz-selection {
+  color: #fff;
+  background: #20bec6;
+}
+::selection {
+  color: #fff;
+  background: #20bec6;
+}
+
 html {
   font-family: "Montserrat", "NanumBarunGothic", sans-serif;
   font-size: 12px;
@@ -336,4 +345,119 @@ header.scrolled #gnb a::after {
 #works .more:hover {
   background: #222;
   color: #fff;
+}
+
+#about {
+  background: url("../images/twoply-bg.jpg") center center/cover no-repeat fixed;
+  color: #fff;
+  text-align: center;
+}
+#about .inner {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#about h3 {
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+#about p {
+  width: 50%;
+  margin: 0 auto 30px;
+  font-size: 24px;
+  line-height: 1.42;
+  font-weight: 300;
+  word-break: keep-all;
+}
+#about a {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  border: 1px solid #fff;
+}
+#about a:hover {
+  background: #fff;
+  color: #222;
+}
+
+#press {
+  background: #eee;
+  padding: 50px 0;
+  overflow: hidden;
+}
+#press h3 {
+  margin: 0 0 50px 120px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+#press h3 a:hover {
+  text-decoration: underline;
+}
+#press .inner {
+  padding: 20px 50px;
+}
+#press .slider {
+  display: flex;
+}
+#press .slider .box {
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+#press .slider .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px #aaa;
+}
+#press .slider li {
+  flex-shrink: 0;
+}
+#press .slider img {
+  width: 100%;
+}
+#press .slider h4 {
+  padding: 10px 15px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#press .slider h4:hover {
+  color: #20bec6;
+}
+#press .slider h4 + p {
+  padding: 0 15px;
+  font-size: 10px;
+}
+#press .slider .more {
+  display: block;
+  max-width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #222;
+  margin: 0 auto;
+  border: 1px solid #222;
+}
+#press .slider .more:hover {
+  background: #222;
+  color: #fff;
+}
+#press .dot {
+  margin-top: 40px;
+  text-align: center;
+}
+#press .dot span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#press .dot span.active {
+  opacity: 1;
 }

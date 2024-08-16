@@ -121,6 +121,62 @@ header.scrolled #gnb a::after {
   padding: 15px 5px;
 }
 
+#search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search .inner {
+  width: 50%;
+}
+#search input {
+  width: 100%;
+  font-size: 7vw;
+  padding: 0 0.1em;
+  box-sizing: border-box;
+  background: none;
+  border: 0;
+  border-bottom: 4px solid #5abcc4;
+  outline: none;
+  color: #5abcc4;
+  font-family: inherit;
+}
+#search input::-moz-placeholder {
+  color: #222;
+}
+#search input::placeholder {
+  color: #222;
+}
+#search p {
+  color: #5abcc4;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 0.85em;
+  text-align: right;
+}
+#search .close_search {
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
+  font-size: 2em;
+  padding: 10px;
+  color: #5abcc4;
+  cursor: pointer;
+}
+#search .close_search i {
+  transition: all 0.3s;
+}
+#search .close_search:hover i {
+  transform: rotate(90deg);
+}
+
 #main_view {
   overflow: hidden;
   background: #000;
@@ -460,4 +516,68 @@ header.scrolled #gnb a::after {
 }
 #press .dot span.active {
   opacity: 1;
+}
+
+#partners {
+  padding: 100px 0;
+}
+#partners h3 {
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: center;
+}
+#partners ul {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#partners li {
+  flex: 0 0 20%;
+}
+#partners img {
+  width: 100%;
+  opacity: 0.3;
+  transition: all 0.5s ease_out;
+}
+#partners img:hover {
+  opacity: 1;
+}
+
+footer {
+  background: #000;
+  color: #999;
+}
+footer .inner {
+  height: 150px;
+  padding: 50px 120px;
+  line-height: 1.4;
+  display: flex;
+}
+footer .logo {
+  width: 30%;
+}
+footer .logo img {
+  width: 100px;
+}
+footer .info {
+  width: 35%;
+  padding-left: 20px;
+}
+footer .info dt {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer .info dd {
+  margin-bottom: 5px;
+}
+footer .copyright {
+  padding: 20px 120px;
+  border-top: 1px solid #222;
+}
+footer .copyright p {
+  margin: 10px 0;
+  font-size: 10px;
 }

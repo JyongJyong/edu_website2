@@ -31,12 +31,23 @@ const swipe2 = new Swiper('#press .inner', {
   wrapperClass:'slider',
   slideClass:'item',
 
-  slidesPerView: 5,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
 
   pagination:{
     el: '.dot',
     bulletActiveClass: 'active',
     clickable: true,
-  }
+  },
+
+  breakpoints:{
+    // 화면의 너비가 320이상 적용
+    320:{slidesPerView: 2, spaceBetween: 20,},
+    // 화면의 너비가 640이상 적용
+    640:{slidesPerView: 3, spaceBetween: 30,},
+    // 화면의 너비가 765이상 적용
+    768:{slidesPerView: 4, spaceBetween: 40,},
+    // 화면의 너비가 1024이상 적용
+    1024:{slidesPerView: 5, spaceBetween: 30,},
+  },
 });

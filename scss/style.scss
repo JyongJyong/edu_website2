@@ -57,7 +57,12 @@ header{
 #search{
     position: fixed; top: 0; left: 0; bottom: 0; right: 0;
     background: #000; z-index: 200; display: flex; justify-content: center; align-items: center;
+    transition: all .3s; opacity: 0; visibility: hidden; transform: scale(1.1, 1.1);
+
+    &.show{opacity: 1; visibility: visible; transform: scale(1, 1);}
+
     .inner{width: 50%;}
+
     input{
         width: 100%; font-size: 7vw; padding: 0 .1em; box-sizing: border-box; background: none; border: 0; 
         border-bottom: 4px solid #5abcc4; outline: none; color: #5abcc4; font-family: inherit;

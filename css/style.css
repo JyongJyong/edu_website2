@@ -132,6 +132,15 @@ header.scrolled #gnb a::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1, 1.1);
+}
+#search.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1, 1);
 }
 #search .inner {
   width: 50%;

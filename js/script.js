@@ -51,3 +51,25 @@ const swipe2 = new Swiper('#press .inner', {
     1024:{slidesPerView: 5, spaceBetween: 30,},
   },
 });
+
+var openSearch = document.getElementById("search_btn");
+var getSearch = document.getElementById("search");
+var closeSearch = document.getElementsByClassName("close_search");
+
+openSearch.addEventListener("click", function(e){
+  e.preventDefault(); // 태그의 본래기능을 동작시키지 않음
+  getSearch.classList.add("show");
+});
+
+closeSearch[0].addEventListener("click", function(){
+  getSearch.classList.remove("show");
+});
+
+// 엔터눌렀을때
+window.addEventListener("keydown", function(e){
+  var state = getSearch.classList.contains("show");
+  var esc = (e.key === "Escape");
+  
+  if(state && esc)
+    getSearch.classList.remove("show");
+});

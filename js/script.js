@@ -73,3 +73,12 @@ window.addEventListener("keydown", function(e){
   if(state && esc)
     getSearch.classList.remove("show");
 });
+
+var openMenuBtn = document.querySelector(".open_menu");
+var openMenu = document.querySelector(".menu");
+
+openMenuBtn.addEventListener("click", function(e){
+  e.preventDefault();
+  openMenu.classList.toggle("active");
+  this.classList.toggle("active");
+});
